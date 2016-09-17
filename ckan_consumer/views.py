@@ -10,7 +10,6 @@ def index(request):
         search_params = {
             'q': query,
             'rows': 10,
-
         }
         data = ckan.call_action('package_search', data_dict=search_params)
 
