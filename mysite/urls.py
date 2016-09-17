@@ -18,5 +18,5 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^ckan/', include('ckan_consumer.urls')),
+    url(r'^ckan_search/', include('web.urls')),
 ]
