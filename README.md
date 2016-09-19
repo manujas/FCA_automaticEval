@@ -25,4 +25,4 @@ pip install -r requirements.txt
 python manage.py runserver
 ```
 
-Puedes acceder en http://localhost:8000/ckan_search
+Puedes acceder en [http://localhost:8000/ckan_search](http://localhost:8000/ckan_search)
