@@ -11,7 +11,7 @@
 <div class="row">
         <form class="col s8 offset-s2 center-align">
             <div class="input-field col s9">
-                <input name="q" type="text" autofocus>
+                <input name="q" type="text">
                 <label for="last_name">buscar</label>
             </div>
             <div class="input-field col s3">
@@ -20,16 +20,22 @@
         </form>
 </div>
 
-{% if data %}
 
-<section calss="search_results">
+
+{% if data %}
+<section class="search_results">
+    <div class="row result-count">
+        <div class="col s4 offset-s4 center-align">
+            <p class="grey-text">resultados obtenidos: {{ data.count }}</p>
+        </div>
+    </div>
     {% for result in data.results %}
     <div class="row result-container">
         <div class="col s8 offset-s2">
             <div class="card-panel hoverable result-item">
                 <h4 class="indigo-text">{{result.title|safe}}</h4>
                 <p class="blue-grey-text text-lighten-1">{{result.author|safe}}</p>
-                <p>{{result.notes|safe|linebreaks|truncatechars:200}}</p>
+                <p>{{result.notes|safe|truncatechars:200}}</p>
             </div>
         </div>
     </div>
