@@ -19,6 +19,14 @@ cd FCA_automaticEval
 pip install -r requirements.txt
 ```
 
+### Genera tu propia SECRECT_KEY
+Ingresa a [Django secret_key generator](http://www.miniwebtool.com/django-secret-key-generator/) y genera una key random para usar en el proyecto
+
+En la terminal, dentro del directorio `mysite/mysite` ejecuta:
+```
+mv secret.example secret.py
+```
+Abre el archivo secret.py y remplaza el valor de SECRECT_KEY por la generada anteriormente.
 
 ### Inicia el servidor
 ```
